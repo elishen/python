@@ -1,0 +1,7 @@
+from string import Template
+s = Template('$who likes $what')
+s.substitute(who='tim', what='kung pao')
+d = dict(who='tim')
+Template('Give $who $100').substitute(d)
+Template('$who likes $what').substitute(d)
+Template('$who likes $what').safe_substitute(d)
